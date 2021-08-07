@@ -7,16 +7,15 @@
   <a href="https://github.com/tanglaoji/tanglaoji.github.io">
     <img src="readme-imgs/toji.png" alt="Logo" width="80" height="80">
   </a>
+</p>
+<h3 align="center">站点聚合 / 资源整合 / 快速搜索</h3>
 
-  <h3 align="center">站点聚合 / 资源整合 / 快速搜索</h3>
-
-  <p align="center">
-    一个迷人的知识广度拓展平台
-    <br />
-    <a href="https://tanglaoji.github.io/"><strong>开始使用 »</strong></a>
-    <br />
-    <br />
-  </p>
+<p align="center">
+  一个迷人的知识广度拓展平台
+  <br />
+  <a href="https://tanglaoji.github.io/"><strong>开始使用 »</strong></a>
+  <br />
+  <br />
 </p>
 
 <details open="open">
@@ -31,7 +30,11 @@
 
 <h2 id="preface">前言</h2>
 
-[![Product Screen Shot][product-screenshot]](https://tanglaoji.github.io/)
+<p align="center">
+  <a href="https://github.com/tanglaoji/tanglaoji.github.io">
+    <img src="readme-imgs/screenshot.png" alt="screenshot">
+  </a>
+</p>
 
 21世纪拥有了一个无比庞大的互联网，同时催生出了一大批实用性高、学习目的性强的优质网站，本着公益互享的初心，现开发一个迷人的知识广度拓展平台，帮助好学的网友们快速检索到心仪的资源。
 
@@ -61,5 +64,3 @@ _查看更多，请[开始使用](https://tanglaoji.github.io/)_
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://tanglaoji.github.io/
-
-[product-screenshot]: readme-imgs/screenshot.png
