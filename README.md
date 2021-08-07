@@ -22,14 +22,14 @@
 <details open="open">
   <h2>目录</h2>
   <ol>
-    <li><a href="#about-the-project">前言</a></li>
-    <li><a href="#getting-started">框架</a></li>
+    <li><a href="#preface">前言</a></li>
+    <li><a href="#frame">框架</a></li>
     <li><a href="#usage">用法</a></li>
   </ol>
 </details>
 <br />
 
-## 前言
+<h2 id="preface">前言</h2>
 
 [![Product Screen Shot][product-screenshot]](https://tanglaoji.github.io/)
 
@@ -40,13 +40,13 @@
 * 您的时间应该专注于创造一些令人惊奇的东西。这是一个解决问题并帮助他人的项目。
 * 您不应该像无头苍蝇一样，一次又一次的经历漫无目的、毫无意义的检索。
 
-## 框架
+<h2 id="frame">框架</h2>
 
 本项目所使用的所有主要框架。
 * [Vue](https://cn.vuejs.org/)
 * [Element-UI](https://element.eleme.cn/)
 
-## 用法
+<h2 id="usage">用法</h2>
 
 此空间将用来展示如何使用本网页。
 
