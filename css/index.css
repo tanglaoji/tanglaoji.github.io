@@ -6,9 +6,9 @@
 /* loading... */
 .loading{
     top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    right: 0;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 64px);
     display: flex;
     position: fixed;
     align-items: center;
@@ -74,14 +74,34 @@ body{
 #index{
     height: 100%;
 }
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+    background-color: transparent;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: #c8c8c8;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+}
 /* 顶部导航条 */
 #navigation{
     top: 0;
     width: 100%;
     height: 64px;
+    z-index: 999;
     display: flex;
     position: fixed;
-    z-index: 999999;
     padding: 0 38px;
     color: #2f90b9;
     align-items: center;
@@ -157,28 +177,22 @@ body{
     padding-top: 20px;
 }
 #sidebar li{
+    width: 100%;
     height: 40px;
     display: flex;
+    color: #222;
+    padding: 0 38px;
     font-size: 14px;
+    cursor: pointer;
     align-items: center;
 }
 #sidebar li:hover{
+    color: #2f90b9;
     background-color: #f5f5f5;
 }
 #sidebar i{
     font-size: 20px;
     margin-right: 10px;
-}
-#sidebar a{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    color: #222;
-    padding: 0 38px;
-    align-items: center;
-}
-#sidebar a:hover{
-    color: #2f90b9;
 }
 
 /* 公告 */
@@ -202,9 +216,10 @@ body{
     align-items: center;
 }
 #announcement-a{
+    cursor: pointer;
+    overflow: hidden;
     color: #9ea4a9;
     white-space: nowrap;
-    overflow: hidden;
     text-overflow: ellipsis;
     -o-text-overflow: ellipsis;
     -moz-text-overflow: ellipsis;
@@ -218,4 +233,96 @@ body{
     font-size: 22px;
     cursor: pointer;
 }
+
+/* 卡片容器 */
+.card-container{
+    height: auto;
+    padding: 10px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.card-container-title{
+    height: 30px;
+    display: flex;
+    padding: 0 20px;
+    color: #50514F;
+    border-bottom: 1px solid #D8E2DC;
+}
+.card-container ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card-container li{
+    margin: 10px;
+    display: flex;
+    padding: 10px;
+    height: 188px;
+    width: 296px;
+    border-radius: 5px;
+    flex-direction: column;
+    background-color: #fafafa;
+    justify-content: space-between;
+}
+.card-item-body{
+    display: flex;
+    padding-bottom: 10px;
+}
+.card-item-body img{
+    flex: 1;
+    width: 82px;
+    height: 82px;
+    border-radius: 15px;
+    background-color: #fff;
+}
+.card-item-content{
+    padding-left: 10px;
+}
+.card-item-content h4{
+    margin: 0;
+    color: #50514F;
+}
+.card-item-content label{
+    color: #9ea4a9;
+    font-size: 12px;
+}
+.card-item-footer{
+    display: flex;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+.card-item-footer-tags{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    justify-content: flex-end;
+}
+.card-item-footer-tags .el-tag{
+    margin-left: 5px;
+    height: 26px !important;
+    line-height: 24px !important;
+}
+.card-item-footer-tools{
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #D8E2DC;
+}
+.card-item-footer-tools-item{
+    flex: 1;
+    display: flex;
+    cursor: pointer;
+    color: #50514F;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.card-item-footer-tools-item:nth-child(2){
+    border-left: 1px solid #D8E2DC;
+    border-right: 1px solid #D8E2DC;
+}
 /* element-ui */
+.el-message{
+    min-width: auto !important;
+}
