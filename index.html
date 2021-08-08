@@ -6,7 +6,7 @@
     <link rel="icon" href="./assets/images/icons/favicon.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>资源在哪里，在这里 - 站点导航 </title>
+    <title>站点导航 - 资源在哪里？在这里！</title>
 
     <!--  Just for this html  -->
     <link rel="stylesheet" href="./css/index.css">
@@ -46,12 +46,12 @@
         </div>
         <el-container style="height: 100%;">
             <el-aside width="200px" style="background-color: #fff;">
-                <ul id="sidebar">
-                    <li v-for="item,index in sidebar" :key="index">
-                        <a href="#">
-                            <i class='bx' :class="item.icon"></i>
-                            {{item.title}}
-                        </a>
+                <ul id="sidebar" class="not-selectable">
+                    <li v-for="item,index in sidebar" @click="javascript:document.getElementsByClassName('card-container')[index].scrollIntoView({
+                            behavior: 'smooth'
+                        })">
+                        <i class='bx' :class="item.icon"></i>
+                        {{item.title}}
                     </li>
                 </ul>
             </el-aside>
@@ -60,11 +60,40 @@
                     <label id="announcement-label">
                         <i class='bx bx-volume-full'></i>&nbsp;
                         <div class="dots-7" v-if="isLoading[1]"></div>
-                        <a href="#" id="announcement-a">{{announcement}}</a>
+                        <a id="announcement-a" @click="openAnnouncement">{{announcement}}</a>
                     </label>
                     <i class='bx bx-x' id="announcement-close" @click="closeAnnouncement"></i>
                 </div>
-                <div class="content"></div>
+                <div class="card-container not-selectable" v-for="item in sidebar">
+                    <div class="card-container-title">{{item.title}}</div>
+                    <ul>
+                        <li v-for="item in item.website">
+                            <div class="card-item-body">
+                                <img :src="'./assets/images/website/'+item.img">
+                                <div class="card-item-content">
+                                    <h4>{{item.title}}</h4>
+                                    <label>{{item.desc}}</label>
+                                </div>
+                            </div>
+                            <div class="card-item-footer">
+                                <div class="card-item-footer-tags">
+                                    <el-tag type="info" v-for="tag in item.tags">{{tag}}</el-tag>
+                                </div>
+                                <div class="card-item-footer-tools">
+                                    <a href="#" class="card-item-footer-tools-item">
+                                        <i class='bx bx-like'></i>
+                                    </a>
+                                    <a class="card-item-footer-tools-item copy-link" :data-clipboard-text="item.url">
+                                        <i class='bx bx-share'></i>
+                                    </a>
+                                    <a :href="item.url" class="card-item-footer-tools-item" target="_blank">
+                                        <i class='bx bx-link-external'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </el-main>
         </el-container>
     </div>
