@@ -1,0 +1,221 @@
+@font-face {
+    font-family: 'pangmenzhengdao';
+    src: url("../assets/fonts/庞门正道标题体.ttf");
+}
+
+/* loading... */
+.loading{
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+.spinner-7 {
+    width:50px;
+    height:50px;
+    --c:radial-gradient(farthest-side,#25b09b 92%,#0000);
+    background: 
+      var(--c) 50% 0,
+      var(--c) 50% 100%,
+      var(--c) 100% 50%,
+      var(--c) 0    50%;
+    background-size:12px 12px;
+    background-repeat:no-repeat;
+    animation:s7 1s infinite;
+}
+@keyframes s7 {to{transform: rotate(.5turn)}}
+.dots-7 {
+    width:20px;
+    height:12px;
+    background: 
+      radial-gradient(circle closest-side,currentColor 90%,#0000) 0%   50%,
+      radial-gradient(circle closest-side,currentColor 90%,#0000) 50%  50%,
+      radial-gradient(circle closest-side,currentColor 90%,#0000) 100% 50%;
+    background-size:calc(100%/3) 100%;
+    background-repeat: no-repeat;
+    animation:d7 1s infinite linear;
+  }
+  @keyframes d7 {
+      33%{background-size:calc(100%/3) 0%  ,calc(100%/3) 100%,calc(100%/3) 100%}
+      50%{background-size:calc(100%/3) 100%,calc(100%/3) 0%  ,calc(100%/3) 100%}
+      66%{background-size:calc(100%/3) 100%,calc(100%/3) 100%,calc(100%/3) 0%  }
+  }
+
+/* common */
+.not-selectable {
+    user-select: none;
+    -ms-user-select: none; /*IE10*/
+    -moz-user-select: none; /*火狐*/
+    -khtml-user-select: none; /*早期浏览器*/
+    -webkit-user-select: none; /*webkit浏览器*/
+}
+*{
+    box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    list-style: none;
+    padding-left: 0 !important;
+}
+a{
+    text-decoration: none;
+}
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 64px 0 0 0;
+    background-color: #f0f2f5;
+}
+#index{
+    height: 100%;
+}
+/* 顶部导航条 */
+#navigation{
+    top: 0;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    position: fixed;
+    z-index: 999999;
+    padding: 0 38px;
+    color: #2f90b9;
+    align-items: center;
+    background-color: #fff;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);;
+}
+#navigation-left{
+    flex: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#navigation-right{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.title{
+    width: 164px;
+    display: flex;
+    font-size: 26px;
+    align-items: center;
+    white-space: nowrap;
+    font-family: "pangmenzhengdao";
+}
+
+/* 导航菜单 */
+#nav-menu{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-menu-li{
+    height: 100%;
+    display: flex;
+    font-size: 16px;
+    margin: 0 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.nav-menu-li::before{
+    content: "";
+    width: 0px;
+    position: absolute;
+    display: inline-block;
+    border-bottom: 0px solid #2f90b9;
+    bottom: 0;
+    left: 50%;
+    transition: all linear .15s;
+}
+.nav-menu-li:hover::before{
+    left: 1px;
+    width: 100%;
+    border-bottom-width: 2px;
+}
+.nav-menu-li-a{
+    height: 100%;
+    display: flex;
+    color: #222;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+}
+.nav-menu-li-a:hover{
+    color: #2f90b9;
+}
+
+/* 侧边栏 */
+#sidebar{
+    padding-top: 20px;
+}
+#sidebar li{
+    height: 40px;
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+}
+#sidebar li:hover{
+    background-color: #f5f5f5;
+}
+#sidebar i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+#sidebar a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #222;
+    padding: 0 38px;
+    align-items: center;
+}
+#sidebar a:hover{
+    color: #2f90b9;
+}
+
+/* 公告 */
+#announcement{
+    height: 36px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-size: 13px;
+    color: #9ea4a9;
+    border-radius: 5px;
+    align-items: center;
+    white-space: nowrap;
+    background-color: #fff;
+    justify-content: space-between;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+}
+#announcement-label{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+#announcement-a{
+    color: #9ea4a9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+#announcement-a:hover{
+    text-decoration: underline;
+}
+#announcement-close{
+    margin-top: 3.2px;
+    font-size: 22px;
+    cursor: pointer;
+}
+/* element-ui */

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./assets/images/icons/favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资源在哪里，在这里 - 站点导航 </title>
+
+    <!--  Just for this html  -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- CSS: Boxicons.css; Element.css; -->
+    <link rel="stylesheet" href="./assets/frames/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" href="./assets/frames/element-ui/lib/theme-chalk/index.css">
+    <!-- JS: Vue.js; Element.js; clip.js; axios.js; -->
+    <script src="./assets/frames/vue/vue.min.js"></script>
+    <script src="./assets/frames/axios/dist/axios.min.js"></script>
+    <script src="./assets/frames/element-ui/lib/index.js"></script>
+    <script src="./assets/frames/clipboard/dist/clipboard.min.js"></script>
+</head>
+
+<body>
+    <div id="index">
+        <div class="loading" v-if="isLoading[0]">
+            <div class="spinner-7"></div>
+        </div>
+        <div id="navigation" class=" not-selectable">
+            <div id="navigation-left">
+                <label class="title"><i class='bx bx-navigation'></i>站点导航</label>
+                <ul id="nav-menu">
+                    <li class="nav-menu-li"><a href="#" class="nav-menu-li-a"><i class='bx bx-home'></i>&nbsp;首页</a>
+                    </li>
+                    <li class="nav-menu-li"><a href="#" class="nav-menu-li-a"><i class='bx bx-grid-alt'></i>&nbsp;资源</a>
+                    </li>
+                    <li class="nav-menu-li"><a href="#" class="nav-menu-li-a"><i class='bx bx-world'></i>&nbsp;世界</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="navigation-right">
+                <el-input v-model="search" placeholder="全站搜索资源">
+                    <el-button slot="append" icon="el-icon-search"></el-button>
+                </el-input>
+                <i class='bx bx-user-circle' style="margin-left: 20px;font-size: 30px;color: #222;"></i>
+            </div>
+        </div>
+        <el-container style="height: 100%;">
+            <el-aside width="200px" style="background-color: #fff;">
+                <ul id="sidebar">
+                    <li v-for="item,index in sidebar" :key="index">
+                        <a href="#">
+                            <i class='bx' :class="item.icon"></i>
+                            {{item.title}}
+                        </a>
+                    </li>
+                </ul>
+            </el-aside>
+            <el-main>
+                <div id="announcement" v-if="isShowAnnouncement" class="not-selectable">
+                    <label id="announcement-label">
+                        <i class='bx bx-volume-full'></i>&nbsp;
+                        <div class="dots-7" v-if="isLoading[1]"></div>
+                        <a href="#" id="announcement-a">{{announcement}}</a>
+                    </label>
+                    <i class='bx bx-x' id="announcement-close" @click="closeAnnouncement"></i>
+                </div>
+                <div class="content"></div>
+            </el-main>
+        </el-container>
+    </div>
+    <!--  Just for this html  -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
