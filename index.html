@@ -83,7 +83,8 @@
                                     <a href="#" class="card-item-footer-tools-item">
                                         <i class='bx bx-like'></i>
                                     </a>
-                                    <a class="card-item-footer-tools-item copy-link" :data-clipboard-text="item.url">
+                                    <a class="card-item-footer-tools-item copy-link"
+                                        :data-clipboard-text="'我在站点导航发现了《'+item.title+'》点击链接，直达现场！- '+item.url">
                                         <i class='bx bx-share'></i>
                                     </a>
                                     <a :href="item.url" class="card-item-footer-tools-item" target="_blank">
