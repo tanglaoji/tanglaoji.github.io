@@ -72,19 +72,146 @@ new Vue({
                 },
                 {
                     title: "JS框架",
-                    icon: "bxs-file-js"
+                    icon: "bxs-file-js",
+                    website: [
+                        {
+                            url: "https://cn.vuejs.org/",
+                            title: "Vue",
+                            img: "JS-frame/vue.svg",
+                            desc: "Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。",
+                            tags: ["热门", "渐进式"]
+                        },
+                        {
+                            url: "https://react.docschina.org/",
+                            title: "React",
+                            img: "JS-frame/react.svg",
+                            desc: "用于构建用户界面的 JavaScript 库。",
+                            tags: ["热门", "前端"]
+                        },
+                        {
+                            url: "https://www.angularjs.net.cn/",
+                            title: "Angular",
+                            img: "JS-frame/angular.png",
+                            desc: "AngularJS有着诸多特性，最为核心的是：模块化、双向数据绑定、依赖注入等等。",
+                            tags: ["前端"]
+                        },
+                        {
+                            url: "https://www.jquery123.com/",
+                            title: "Jquery",
+                            img: "JS-frame/jquery.png",
+                            desc: "Jquery 提供的 API 易于使用且兼容众多浏览器，如事件处理、动画和 Ajax 等操作更加简单。",
+                            tags: ["前端"]
+                        },
+                    ]
                 },
                 {
                     title: "前端插件",
-                    icon: "bx-plug"
+                    icon: "bx-plug",
+                    website: [
+                        {
+                            url: "https://layer.layui.com/",
+                            title: "Layer",
+                            img: "Front-end-plugin/layer.png",
+                            desc: "用于实现网页中的各种弹出层交互，是一个Web弹窗/层的解决方案。",
+                            tags: ["插件"]
+                        },
+                        {
+                            url: "https://echarts.apache.org/",
+                            title: "Echarts",
+                            img: "Front-end-plugin/echarts.png",
+                            desc: "一个由百度EFE团队出品的基于 JavaScript 的开源可视化图表库。",
+                            tags: ["热门", "插件"]
+                        },
+                        {
+                            url: "https://msurguy.github.io/background-blur/",
+                            title: "Background-blur",
+                            img: "Front-end-plugin/backgroundblur.png",
+                            desc: "一个用于模糊图像的超小 Jquery 插件，基于 SVG 生成。",
+                            tags: ["插件"]
+                        },
+                        {
+                            url: "https://interactjs.io/",
+                            title: "Interact",
+                            img: "Front-end-plugin/interact.svg",
+                            desc: "Interact是一个基于 JavaScript 的强大插件，集拖放、调整大小和多点触控手势等功能。",
+                            tags: ["插件"]
+                        },
+                        {
+                            url: "https://www.swiper.com.cn/",
+                            title: "Swiper",
+                            img: "Front-end-plugin/swiper.png",
+                            desc: "Swiper 是纯 javascript 打造的滑动特效插件，面向手机、平板电脑等移动终端。",
+                            tags: ["插件"]
+                        },
+                    ]
                 },
                 {
                     title: "Web公共库",
-                    icon: "bxs-webcam"
+                    icon: "bxs-webcam",
+                    website: [
+                        {
+                            url: "https://www.bootcdn.cn/",
+                            title: "BootCDN",
+                            img: "Web-public-library/bootcdn.png",
+                            desc: "一个稳定、快速、免费的前端开源项目 CDN 加速服务，共收录了 4k+ 个前端开源项目。",
+                            tags: ["CDN"]
+                        },
+                        {
+                            url: "https://www.staticfile.org/",
+                            title: "StaticCDN",
+                            img: "Web-public-library/staticcdn.png",
+                            desc: "一个 CDN 仓库，尽可能全面的收录优秀的开源库，并免费为之提供 CDN 加速服务。",
+                            tags: ["CDN"]
+                        },
+                        {
+                            url: "https://www.jq22.com/",
+                            title: "JQ插件库",
+                            img: "Web-public-library/jq22.png",
+                            desc: "最全面的 Jquery 插件库，几乎收录了所有最新最好用的插件。",
+                            tags: ["仓库"]
+                        },
+                        {
+                            url: "http://jscdn.upai.com/",
+                            title: "又拍云CDN",
+                            img: "Web-public-library/upai.png",
+                            desc: "又拍云为您托管常用的JavaScript库，您可以在自己的网页上直接通过script标记引用这些资源。",
+                            tags: ["CDN"]
+                        },
+                    ]
                 },
                 {
                     title: "字体图标",
-                    icon: "bx-text"
+                    icon: "bx-text",
+                    website: [
+                        {
+                            url: "https://www.iconfont.cn/",
+                            title: "Iconfont",
+                            img: "Font-icon/iconfont.svg",
+                            desc: "阿里妈妈MUX倾力打造的矢量图标管理、交流平台。便于前端工程师自由调整与调用。",
+                            tags: ["图标"]
+                        },
+                        {
+                            url: "https://boxicons.com/",
+                            title: "Boxicons",
+                            img: "Font-icon/boxicons.svg",
+                            desc: "高品质的网页图标，为设计师和开发人员精心制作的简单矢量图标。",
+                            tags: ["图标"]
+                        },
+                        {
+                            url: "https://icomoon.io/",
+                            title: "Icomoon",
+                            img: "Font-icon/icomoon.png",
+                            desc: "国外的一款像素级完美图标解决方案，提供免费开源的字体图标库。",
+                            tags: ["图标", "字体"]
+                        },
+                        {
+                            url: "https://fontawesome.dashgame.com/",
+                            title: "FontAwesome",
+                            img: "Font-icon/fontawesome.png",
+                            desc: "Font Awesome 为您提供可缩放的矢量图标，您可以使用CSS所提供的所有特性对它们进行更改。",
+                            tags: ["图标", "字体"]
+                        },
+                    ]
                 },
                 {
                     title: "包管理器",
